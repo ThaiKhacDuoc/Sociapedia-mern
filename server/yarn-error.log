@@ -1,0 +1,34 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Users\khacd\AppData\Local\node\corepack\yarn\1.22.19\bin\yarn.js add □âexpress body-parser bcrypt cors dotenv gridfs-stream multer multer-gridfs-storage helmet morgan jsonwebtoken
+
+PATH: 
+  C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\khacd\bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0;C:\Windows\System32\OpenSSH;E:\Java\jdk-20\bin;C:\Program Files (x86)\Microsoft SQL Server\160\Tools\Binn;C:\Program Files\Microsoft SQL Server\160\Tools\Binn;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn;C:\Program Files\Microsoft SQL Server\160\DTS\Binn;C:\Program Files\Microsoft SQL Server\150\Tools\Binn;C:\Program Files\dotnet;C:\Program Files (x86)\Microsoft SQL Server\160\DTS\Binn;C:\Program Files\Azure Data Studio\bin;C:\msys64\mingw64\bin;C:\nvm;C:\Program Files\nodejs;E:\Git\cmd;C:\Program Files\Git\cmd;C:\Users\khacd\scoop\apps\gcc\current\bin;C:\Users\khacd\scoop\shims;C:\Program Files\MySQL\MySQL Shell 8.0\bin;C:\Users\khacd\AppData\Local\Microsoft\WindowsApps;E:\Microsoft VS Code\bin;C:\Users\khacd\.dotnet\tools;E:\msys64\mingw64\bin;C:\Users\khacd\AppData\Local\Programs\oh-my-posh\bin
+
+Yarn version: 
+  1.22.19
+
+Node version: 
+  16.18.1
+
+Platform: 
+  win32 x64
+
+Trace: 
+  TypeError [ERR_UNESCAPED_CHARACTERS]: https://registry.yarnpkg.com/□âexpress: Request path contains unescaped characters
+      at new NodeError (node:internal/errors:387:5)
+      at new ClientRequest (node:_http_client:182:13)
+      at Object.request (node:https:357:10)
+      at Request.module.exports.Request.start (C:\Users\khacd\AppData\Local\node\corepack\yarn\1.22.19\lib\cli.js:141452:32)
+      at Request.module.exports.Request.end (C:\Users\khacd\AppData\Local\node\corepack\yarn\1.22.19\lib\cli.js:142211:10)
+      at end (C:\Users\khacd\AppData\Local\node\corepack\yarn\1.22.19\lib\cli.js:141265:14)
+      at Immediate.<anonymous> (C:\Users\khacd\AppData\Local\node\corepack\yarn\1.22.19\lib\cli.js:141279:7)
+      at processImmediate (node:internal/timers:466:21)
+
+npm manifest: 
+  No manifest
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
