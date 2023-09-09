@@ -26,7 +26,7 @@ import { useNavigate } from "react-router-dom";
 import FlexBetween from "components/FlexBetween";
 
 const Navbar = () => {
-  const [isMobileMenuToggle, setIsMobileMenuToggle] = useState(false);
+  const [isMobileMenuToggled, setIsMobileMenuToggled] = useState(false);
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const user = useSelector((state) => state.user);
@@ -36,10 +36,10 @@ const Navbar = () => {
   const neutralLight = theme.palette.neutral.light;
   const dark = theme.palette.neutral.dark;
   const background = theme.palette.background.default;
-  const primary = theme.palette.primary.light;
+  const primaryLight = theme.palette.primary.light;
   const alt = theme.palette.background.alt;
 
-  //const fullName = `${user.firstName} ${user.lastName}`;
+  const fullName = `${user.firstName} ${user.lastName}`;
 
   return (
     <FlexBetween padding="1rem 6%" backgroundColor={alt}>
@@ -51,7 +51,7 @@ const Navbar = () => {
           onClick={() => navigate("/home")}
           sx={{
             "&:hover": {
-              color: "primaryLight",
+              color: primaryLight,
               cursor: "pointer",
             },
           }}
@@ -72,6 +72,7 @@ const Navbar = () => {
           </FlexBetween>
         )}
       </FlexBetween>
+
       {/* DESKTOP NAV */}
       {isNonMobileScreens ? (
         <FlexBetween gap="2rem">
@@ -85,9 +86,9 @@ const Navbar = () => {
           <Message sx={{ fontSize: "25px" }} />
           <Notifications sx={{ fontSize: "25px" }} />
           <Help sx={{ fontSize: "25px" }} />
-          <FormControl variant="standard" >
+          <FormControl variant="standard" value={fullName}>
             <Select
-              
+              value={fullName}
               sx={{
                 backgroundColor: neutralLight,
                 width: "150px",
@@ -103,21 +104,23 @@ const Navbar = () => {
               }}
               input={<InputBase />}
             >
-              <MenuItem >
-                <Typography>a</Typography>
+              <MenuItem value={fullName}>
+                <Typography>{fullName}</Typography>
               </MenuItem>
               <MenuItem onClick={() => dispatch(setLogout())}>Log Out</MenuItem>
             </Select>
           </FormControl>
         </FlexBetween>
       ) : (
-        <IconButton onClick={() => setIsMobileMenuToggle(!isMobileMenuToggle)}>
+        <IconButton
+          onClick={() => setIsMobileMenuToggled(!isMobileMenuToggled)}
+        >
           <Menu />
         </IconButton>
       )}
 
       {/* MOBILE NAV */}
-      {!isNonMobileScreens && isMobileMenuToggle && (
+      {!isNonMobileScreens && isMobileMenuToggled && (
         <Box
           position="fixed"
           right="0"
@@ -131,13 +134,13 @@ const Navbar = () => {
           {/* CLOSE ICON */}
           <Box display="flex" justifyContent="flex-end" p="1rem">
             <IconButton
-              onClick={() => setIsMobileMenuToggle(!isMobileMenuToggle)}
+              onClick={() => setIsMobileMenuToggled(!isMobileMenuToggled)}
             >
               <Close />
             </IconButton>
           </Box>
 
-          {/* MENU ITEM */}
+          {/* MENU ITEMS */}
           <FlexBetween
             display="flex"
             flexDirection="column"
@@ -158,9 +161,9 @@ const Navbar = () => {
             <Message sx={{ fontSize: "25px" }} />
             <Notifications sx={{ fontSize: "25px" }} />
             <Help sx={{ fontSize: "25px" }} />
-            <FormControl variant="standard" >
+            <FormControl variant="standard" value={fullName}>
               <Select
-                
+                value={fullName}
                 sx={{
                   backgroundColor: neutralLight,
                   width: "150px",
@@ -176,8 +179,8 @@ const Navbar = () => {
                 }}
                 input={<InputBase />}
               >
-                <MenuItem >
-                  <Typography></Typography>
+                <MenuItem value={fullName}>
+                  <Typography>{fullName}</Typography>
                 </MenuItem>
                 <MenuItem onClick={() => dispatch(setLogout())}>
                   Log Out
