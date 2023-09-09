@@ -1,6 +1,6 @@
-# MERN App with Auth, Likes, Dark Mode
+# Social Media App
 
-A MERN stack (MongoDB, Express, React, Node.js) application with user authentication, like functionality, and dark mode.
+Responsive MERN App with Auth, Likes, Dark Mode | React, MongoDB, MUI
 
 ## Features
 
