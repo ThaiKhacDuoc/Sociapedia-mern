@@ -58,10 +58,3 @@ PORT = 3001
 ## Contributing
 
 If you wish to contribute to the project, please create a Pull Request.
-
-## License
-
-
----
-
-Hope this helps! Adjust it as per the specific details and requirements of your project.
