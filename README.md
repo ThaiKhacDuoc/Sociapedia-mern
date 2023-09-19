@@ -1,6 +1,6 @@
-# MERN App with Auth, Likes, Dark Mode
+# Social Media App
 
-A MERN stack (MongoDB, Express, React, Node.js) application with user authentication, like functionality, and dark mode.
+Responsive MERN App with Auth, Likes, Dark Mode | React, MongoDB, MUI
 
 ## Features
 
@@ -14,7 +14,7 @@ A MERN stack (MongoDB, Express, React, Node.js) application with user authentica
 1. **Install dependencies**:
 
 ```bash
-yarn install
+yarn
 ```
 
 2. **Run the server (backend)**:
@@ -59,4 +59,3 @@ PORT = 3001
 
 If you wish to contribute to the project, please create a Pull Request.
 
-## License
