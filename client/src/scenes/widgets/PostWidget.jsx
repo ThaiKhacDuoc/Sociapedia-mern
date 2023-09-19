@@ -61,7 +61,7 @@ const PostWidget = ({
         {description}
       </Typography>
       {picturePath && (
-        <image
+        <img
           width="100%"
           height="auto"
           alt="post"
